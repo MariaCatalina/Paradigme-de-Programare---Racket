@@ -1,0 +1,39 @@
+
+ < Tema 1 - Constructia arborilor de decizie >
+
+Arborele pregatitor este construit sub urmatoarea forma:
+ -lista care contine atributul pe prima pozitie si perechi de forma
+(valori-atribut , clasa-atribut)
+
+	1. Compute-enthropy
+	
+	Functia enth calculeaza suma peste clase p(clasa)* log2 p(clasa).
+Se apeleaza functia sum care returneaza suma totala de exemple, iar 
+functia parcurgere extrage din lista doar perechile care incep cu un
+atribut dat.
+	
+	2. Compute-gain
+
+	Functia suma-valori calculeaza suma-peste-valori-A . Se apeleaza 
+functia par-at care extrage din lista doar acele linii care au valoarea
+v pentru atributul cerut.
+
+	3. Constructie arbore
+
+	Se verifica daca lista de exemple s-a terminat si intoarce null , apoi
+veirfica daca exemplele au acceasi clasa cu returneaza clasa respectiva,
+in caz afirmativ . Altfel se vefirifica daca lista de atribute nu e null
+si se face maximul pe lista de atribute , eliminandu-se apoi. Se apeleaza
+recursiv functia de creare a arborelui pentru fiecare valoare a atributului
+cu castig international maxim.
+	Functia maxim sorteaza lista pe perechi (gain,atribut) in ordine
+crescatoare si returneaza prima valoare.
+	Functia most-frecvent verifica care este clasa care apare de cele mai
+multe ori parcurgand lista de exemple si fiecare clasa.
+
+Referinte :
+-> pentru a determina forma arborelui am vorbit cu Lavinia Tache de la
+321CA 
+-> constructie arbore: https://www.eecs.berkeley.edu/~bh/ssch18/trees.html
+-> mod conctructie arbore: http://www.cis.temple.edu/~giorgio/cis587/readings/id3-c45.html
+  
